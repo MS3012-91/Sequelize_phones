@@ -1,0 +1,4 @@
+DELETE http://localhost:3000/api/phones/3 HTTP/1.1
+
+
+DELETE http://localhost:3000/api/phones/1000 HTTP/1.1
