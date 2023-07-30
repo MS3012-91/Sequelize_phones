@@ -2,12 +2,12 @@ POST http://localhost:3000/api/phones HTTP/1.1
 Content-Type: application/json
 
 {
-    "producer": "Apple",
-    "model": "860",
-    "productedAt": "2022",
+    "producer": "Hewlett",
+    "model": "1212",
+    "productedAt": "2021",
     "ram": "12",
     "screenSize": "14",
-    "hasNfc": "false"
+    "hasNfc": "true"
 }
 
 POST http://localhost:3000/api/phones HTTP/1.1
@@ -32,5 +32,29 @@ Content-Type: application/json
     "ram": "12",
     "screenSize": "14",
     "hasNfc": "false"
-};
+}
+
+POST http://localhost:3000/api/phones HTTP/1.1
+Content-Type: application/json
+
+{
+    "producer": "Apple",
+    "model": "MA-50",
+    "productedAt": "     ",
+    "ram": "12",
+    "screenSize": "14",
+    "hasNfc": "false"
+}
+
+POST http://localhost:3000/api/phones HTTP/1.1
+Content-Type: application/json
+
+{
+    "producer": "Apple",
+    "model": "MA-50",
+    "productedAt": "206",
+    "ram": "12",
+    "screenSize": "14",
+    "hasNfc": "false"
+}
 

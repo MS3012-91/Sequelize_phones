@@ -1,0 +1,6 @@
+DELETE http://localhost:3000/api/prices/1
+
+//get not found,404
+DELETE http://localhost:3000/api/prics/1
+//id was deleted in step 1 => 500 Server Error?
+DELETE http://localhost:3000/api/prices/1

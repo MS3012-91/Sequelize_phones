@@ -1,4 +1,0 @@
-GET http://localhost:3000/api/phones/2
-
-
-GET http://localhost:3000/api/phones/100

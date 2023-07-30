@@ -1,0 +1,46 @@
+//valid task **task - 201 task
+POST http://localhost:3000/api/tasks HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "body": "To do homework",
+    "isDone": "true",
+    "deadline": "2023-07-30"
+}
+
+
+POST http://localhost:3000/api/tasks HTTP/1.1
+Content-Type: application/json;
+
+{
+    "body": "To do homework",
+    "deadline": "2023-07-30T19:00:00.000Z"
+}
+
+POST http://localhost:3000/api/tasks HTTP/1.1
+Content-Type: application/json;
+
+{
+    "body": "       ",
+    "isDone": "true",
+    "deadline": "2023-07-30T19:00:00.000Z"
+}
+
+POST http://localhost:3000/api/tasks HTTP/1.1
+Content-Type: application/json;
+
+{
+    "body": "",
+    "isDone": "true",
+    "deadline": "2023-07-30T19:00:00.000Z"
+}
+
+POST http://localhost:3000/api/tasks HTTP/1.1
+Content-Type: application/json;
+
+{
+    "body": "",
+    "isDone": "true",
+    "deadline": "2021-07-30T19:00:00.000Z"
+}

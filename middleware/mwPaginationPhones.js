@@ -5,4 +5,4 @@ module.exports.mwPhones = (req, res, next) => {
         offset: (page - 1) * results
     };
     next()
-}
+};

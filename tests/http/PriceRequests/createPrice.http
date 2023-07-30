@@ -1,0 +1,54 @@
+//Done
+POST http://localhost:3000/api/prices HTTP/1.1
+Content-Type: application/json
+
+{
+"purchasePrice": "25000",
+"markup": [11.5,15],
+"salesComission": [4,6.5],
+"phonesId": "1"
+}
+
+//Validation errors
+POST http://localhost:3000/api/prices HTTP/1.1
+Content-Type: application/json
+
+{
+"purchasePrice": "25000",
+"markup": [15],
+"salesComission": [4,6.5],
+"phonesId": "2"
+}
+
+//Validation errors
+POST http://localhost:3000/api/prices HTTP/1.1
+Content-Type: application/json
+
+{
+"purchasePrice": "hello",
+"markup": [4,15],
+"salesComission": [4,6.5],
+"phonesId": "2"
+}
+
+//Validation errors
+POST http://localhost:3000/api/prices HTTP/1.1
+Content-Type: application/json
+
+{
+"purchasePrice": 600,
+"markup": 6,
+"salesComission": [4,6.5],
+"phonesId": "2"
+}
+
+//Validation errors
+POST http://localhost:3000/api/prices HTTP/1.1
+Content-Type: application/json
+
+{
+"purchasePrice": 23000,
+"markup": [6,6],
+"salesComission": [4,6.5],
+"phonesId": " "
+}

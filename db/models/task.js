@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Phone extends Model {
+  class Task extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,40 +13,30 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  Phone.init({
-    producer: {
+  Task.init({
+    body: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        is: /^[A-Z][a-z]+$/
+        not: /^\s+$/,
+        len: [4,500]
       }
     },
-    model: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    isDone: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
     },
-    productedAt: {
-      type: DataTypes.STRING,
+    deadline: {
+      type: DataTypes.DATE,
       validate: {
         isDate: true,
-        isBefore: new Date().getFullYear().toString()
-      }
+        isAfter: new Date().toISOString()
+      } 
     },
-    ram: {
-      type: DataTypes.SMALLINT,
-      allowNull: false
-    },
-    screenSize: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    hasNfc: {
-      type: DataTypes.BOOLEAN,
-      allowNull:false}
   }, {
     sequelize,
-    modelName: 'Phone',
+    modelName: 'Task',
     underscored:true
   });
-  return Phone;
+  return Task;
 };
